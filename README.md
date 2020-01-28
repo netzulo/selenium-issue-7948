@@ -52,3 +52,16 @@ E   SyntaxError: invalid escape sequence \_
 
 c:\users\cronos\envs\maybeissue2\lib\site-packages\selenium-3.141.0-py3.6.egg\selenium\webdriver\firefox\webdriver.py:29: SyntaxError
 ```
+
+
+## SOLVED
+
+Use this while selenium resolvem _( or not , i can't control this )_
+
+Just a pytest problem at reading some chars on functions documentation marked with "DeprecatedWarning" 
+
+```diff
+[pytest]
++ filterwarnings =
++    ignore::DeprecationWarning
+```
